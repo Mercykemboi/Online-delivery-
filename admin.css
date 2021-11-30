@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+       background: url("images/bg-01.jpg");
+       background-size: cover;
+       background-repeat: no-repeat;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background:white;
+    transition: 0.5s;
+    overflow: hidden;
+    color: black;
+}
+.navigation.active{
+    width: 60px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+
+}
+.navigation ul li:hover{
+    background:blueviolet;
+}
+.navigation ul li :nth-child(1){
+    margin-bottom: 10px;
+}
+.navigation ul li :nth-child(1):hover{
+    background: transparent;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color:black;    display: flex;
+    place-items: center;
+    
+}
+.navigation ul li a .icons{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation ul li a .icons .fa{
+    color:black;
+    font-size: 24px;
+    color: blueviolet;
+}
+.navigation ul li a:hover .icons .fa{
+
+    color: white;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    /* background: url("images/bg-01.jpg"); */
+    transition: 0.5s;
+    padding-top: 20px;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px; 
+}
+.main .topbar{
+    width: 100%;
+    /* background: url("images/bg-01.jpg"); */
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.new-icon{
+    width: 35px;
+    height: 35px;
+    margin-left: 12px;
+    margin-right: 10px;
+}
+.navigation ul li a:hover .new-icon{
+    filter: invert(100%) sepia(100%) saturate(0) hue-rotate(145deg) brightness(100%) contrast(100%);
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    /* height: 60px; */
+    /* background:palevioletred; */
+}
+.toggle::before{
+    content: "";
+    font-weight: 700;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: black;
+
+}
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px ;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 1px solid black;
+}
+.search label .fa{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+.user{
+    min-width: 50px;
+    position: relative;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.cardBox .card{
+    position: relative;
+    background: whitesmoke;
+    padding: 25px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.cardBox .card .numbers{
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+}
+.cardBox .card .cardName{
+    color: black;
+
+}
+.cardBox .card .icon-Box{
+    font-size: 20px;
+}
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 2fr 1fr;
+}
+.details .recentDeliver{
+    position: relative;
+    /* display: grid; */
+    min-height: 530px;
+    background: white;
+    padding: 20px;
+}
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2{
+    font-weight: 600;
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2px;
+
+}
+.details table thead td {
+font-weight: 600;
+}
+.details .recentDeliver table tr {
+    border-bottom: 1px solid;
+}
+.details .recentDeliver table tbody tr:last-child{
+border-bottom: none;
+}
+
+
+.details .recentDeliver table tbody tr:hover{
+    background: blueviolet;
+    color: white;
+}
+.details .recentDeliver table tr td{
+    padding: 10px 6px;
+}
+.details .recentDeliver table thead tr td:last-child,
+.details .recentDeliver table tbody tr td:last-child{
+    text-align: right;
+}
+/* .status{
+    position: relative;
+    padding: 2px 4px;
+    background: skyblue;
+    color: black;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 14px;
+    letter-spacing: 1px;
+} */
+.details .recentSeller{
+    position: relative;
+    /* display: grid; */
+    min-height: 530px;
+    background: white;
+    padding: 20px;
+
+}
+
+.details .recentSeller table tbody tr:hover{
+    background: blueviolet;
+    color: black;
+}
+
+.details .recentSeller table tr td {
+    padding: 7px 10px;
+}
+.details .recentSeller table tr{
+    border-bottom: 1px solid;
+}
+@media (max-width: 1000px){
+.navigation{
+    left: -300px;
+
+}
+.navigation.active{
+    left: 0;
+    width: 300px;
+
+}
+.main{
+    width: 100%;
+    left: 0;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 300px;
+}
+.cardBox{
+    grid-template-columns: repeat(2,1fr);
+}
+    
+}
+@media (max-width: 1366px){
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px){
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details .recentDeliver{
+        overflow-x: auto;
+    }
+    .details .recentDeliver table{
+        width: 600px;
+    }
+    .navigation{
+        width: 100px;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active{
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        left: initial;
+    }
+    .toggle.active::before{
+        color:black;
+    }
+    .main,
+    .main.active
+    {
+        width: 100%;
+        left: 0;
+    }
+}

@@ -1,0 +1,258 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+#nav-bar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/* #nav-bar::before{
+    content: "";
+    background:black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+} */
+/* #logo{
+    margin: 2px 4px;
+} */
+/* #logo img{
+
+    width: 80px;
+    border-radius: 250px; */
+
+/* }
+ul{
+    display: inline-block;
+    display: flex;
+   
+}
+ul li{
+    list-style: none;
+    font-size: 20px;
+}
+ul li a{
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 10px;
+    color: blanchedalmond;
+  
+}
+ul li a:hover{
+    color:black ;
+    background: white;
+}
+ul li ul li{
+    display: none;
+}
+ul li:hover ul li{
+display: block;
+} */
+/* ul{
+    float: left;
+}
+ul li{
+    float: left;
+    list-style: none;
+   position: relative;
+}
+ul li a{
+    padding: 24px 14px;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+}
+ul li ul{
+    display: none;
+    position: absolute;
+    background-color: black;
+    padding: 8px;
+    border-radius: 4px 4px 4px 4px;
+}
+ul li:hover ul{
+    display: block;
+}
+ul li ul li a{
+    padding: 8px 14px;
+}
+ul li ul li{
+    border-radius: 4px;
+}
+ul li ul li a:hover{
+  background-color: blanchedalmond;
+}
+
+#home{
+    padding: 20px;
+    font-size: 30px;
+}
+#section{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 640px;
+    font-size: 20px;
+} 
+#section::before{
+    content: "";
+    background: url("images/track.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.90;
+  
+}
+#section h1{
+    color: white;
+    font-size: 30px;
+}
+#section p{
+    color: white;
+}
+.btn{
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 6px 9px;
+}  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+    /* background-image:url("images/truck.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    
+}
+body{
+    background: url('images/bg-01.jpg');
+}
+label{
+    color:black;
+    align-items: center;
+    
+}
+input{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 2px solid #eaeaea;
+    background: #eaeaea;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    padding: 10px;
+    transition: .4s all;
+    margin-top: 10px;
+}
+
+input:focus{
+    border: 2px solid #5e72e4;
+    background: #fff;
+    transition: .4s all;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 100px;
+    border: none;
+    background:blueviolet;
+    color: #fff;
+    padding: .5rem;
+    border-radius: 30px;
+    outline: none !important;
+}
+
+button:hover, button:focus{
+    background:black;
+}
+
+form{
+    width:450px;
+    margin: auto;
+    border: 1px solid blueviolet;
+    box-shadow: 0 3px 7px rgba(0,0,0,.4);
+    border-radius: .3rem;
+    padding: 1rem;
+    background:white;
+    /* height: 600px; */
+   
+
+}
+
+.header{
+    margin: -1rem  -1rem 1rem;
+    padding: .75rem 1rem;
+    background:blueviolet;
+    color: #fff;
+    border-radius: .3rem .3rem 0 0;
+    width: 450px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    
+}
+.log{
+    color:white;
+    font-size: 16px;
+    align-items: center;
+}
+.header1{
+    /* margin: -1rem  -1rem 1rem; */
+    padding: .75rem 1rem;
+    /* background:crimson; */
+    color: #fff;
+    border-radius: .3rem .3rem 0 0;
+    width: 100%;
+    margin-bottom: 141px;
+    
+}
+/* body{
+    color:black;
+/* } */
+/* .navbar{
+    display:flex;
+    align-items: center;
+    padding: 20px;
+
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style: none;}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+.navtab{
+    display: flex;
+    flex-direction: column;
+}  */

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <head>
+ 	<meta name= "viewport" content= "width=device-width,initial-scale=1">
+	 <title>Form Sign Up</title>
+	 <meta charset="UTF-8"/>
+	 <link rel="stylesheet" type='text/css' media='screen' href="style.css">
+	 
+ </head>
+	 <body>
+	
+	
+	 	<form  id="form" method="POST" action="register.php">
+			 
+			<input type="hidden" name="account_type" value="customer">
+			
+	 		<div class= "header">
+	 		Welcome !!
+	 		</div>
+			 <label >Name</label>
+	 		<input type="text"  placeholder="Type your Name" name="Name" class="Name"  required>
+			
+			 <label >Email</label>
+	 		<input type="text" placeholder="Type your Email" name="Email"  class="Email"  required>
+			 <label >Password</label>
+	 		<input type="password"  placeholder="Type your Password" name="password" class="password"  required>
+         
+			 <label >Phone Number</label>
+          <input type="text"  placeholder="Type your Phone no" name="phoneNo" class="phone"  required>
+		  <label >Address</label>
+			 <input type="text" placeholder="Type your Postal Address" name="PostalA"  required >
+		
+	 		
+	 		
+	 	
+			 <div class="popup">
+				<div class="overlay">
+					<div class="content">
+						
+						<button type="submit"  name="submit" class="submit">Sign Up</button>
+
+					</div>
+				</div>
+	 		
+
+			 <div class="log">
+			<p style="color: black;"> Already have an account?  <a href="LoginCustomer.php">Login</a></p>	
+			 </div>
+<a href="index.html"><button type="button"  name="button"  >Go Back</button></a>
+	 	</form>
+	
+		<script src=Form.js></script>
+	
+	 </body>
+ </html>

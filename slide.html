@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <meta charset='utf-8'>
+     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+     <title>Landing page</title>
+     <meta name='viewport' content='width=device-width, initial-scale=1'>
+     <link rel='stylesheet' type='text/css' media='screen' href='slider.css'>
+     <script src='main1.js'></script>
+ </head>
+ <body>
+     <header>
+         <a href="#" class="logo"><span>online</span>delivery</a>
+         <ul>
+             <li><a href="">Contact</a></li>
+             <li><a href="">Contact</a></li>
+             <li><a href="">Contact</a></li>
+             <li><a href="">Services</a></li>
+         </ul>
+     </header>
+     <div class="slider">
+     <figure>
+     <div class="slide">
+         <p>Slide one</p>
+         <img src="images/track.jpg" alt="">
+     </div>
+     <div class="slide">
+        <p>Slide one</p>
+        <img src="images/truck.jpg" alt="">
+    </div>
+    <div class="slide">
+        <p>Slide one</p>
+        <img src="images/delivery1.jpg" alt="">
+    </div>
+    <div class="slide">
+        <p>Slide one</p>
+        <img src="images/delivery1.jpg" alt="">
+    </div>
+    <div class="slide">
+        <p>Slide one</p>
+        <img src="images/delivery1.jpg" alt="">
+    </div>
+</figure>
+</div>
+    <script>
+        window.addEventListener("scroll", function (){
+    var header=this.document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+    
+})
+    </script>
+ </body>
+ </html>
