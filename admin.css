@@ -5,12 +5,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 body{
-    overflow-x: hidden;
        background: url("images/bg-01.jpg");
-       background-size: cover;
-       background-repeat: no-repeat;
+     
 }
 .container{
     position: relative;
@@ -109,8 +109,8 @@ body{
     align-items: center;
 }
 .new-icon{
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     margin-left: 12px;
     margin-right: 10px;
 }
@@ -135,7 +135,13 @@ body{
     color: black;
 
 }
-.search{
+.services{
+    color: black;
+    position: relative;
+    font-size: 40px;
+    
+}
+/* .search{
     position: relative;
     width: 400px;
     margin: 0 10px;
@@ -157,7 +163,7 @@ body{
     position: absolute;
     left: 15px;
     top: 4px;
-}
+} */
 .user{
     min-width: 50px;
     position: relative;

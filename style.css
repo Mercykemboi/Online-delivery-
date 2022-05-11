@@ -1,125 +1,4 @@
-/* *{
-    margin: 0px;
-    padding: 0px;
-}
-#nav-bar{
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-/* #nav-bar::before{
-    content: "";
-    background:black;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-} */
-/* #logo{
-    margin: 2px 4px;
-} */
-/* #logo img{
 
-    width: 80px;
-    border-radius: 250px; */
-
-/* }
-ul{
-    display: inline-block;
-    display: flex;
-   
-}
-ul li{
-    list-style: none;
-    font-size: 20px;
-}
-ul li a{
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 10px;
-    color: blanchedalmond;
-  
-}
-ul li a:hover{
-    color:black ;
-    background: white;
-}
-ul li ul li{
-    display: none;
-}
-ul li:hover ul li{
-display: block;
-} */
-/* ul{
-    float: left;
-}
-ul li{
-    float: left;
-    list-style: none;
-   position: relative;
-}
-ul li a{
-    padding: 24px 14px;
-    text-decoration: none;
-    display: block;
-    font-size: 24px;
-}
-ul li ul{
-    display: none;
-    position: absolute;
-    background-color: black;
-    padding: 8px;
-    border-radius: 4px 4px 4px 4px;
-}
-ul li:hover ul{
-    display: block;
-}
-ul li ul li a{
-    padding: 8px 14px;
-}
-ul li ul li{
-    border-radius: 4px;
-}
-ul li ul li a:hover{
-  background-color: blanchedalmond;
-}
-
-#home{
-    padding: 20px;
-    font-size: 30px;
-}
-#section{
-    display: flex;
-    flex-direction: column;
-    padding: 3px 200px;
-    justify-content: center;
-    align-items: center;
-    height: 640px;
-    font-size: 20px;
-} 
-#section::before{
-    content: "";
-    background: url("images/track.jpg") no-repeat center center/cover;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.90;
-  
-}
-#section h1{
-    color: white;
-    font-size: 30px;
-}
-#section p{
-    color: white;
-}
-.btn{
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 6px 9px;
-}  */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -180,7 +59,8 @@ button:hover, button:focus{
 }
 
 form{
-    width:450px;
+    max-width: 450px;
+    width: 100%;
     margin: auto;
     border: 1px solid blueviolet;
     box-shadow: 0 3px 7px rgba(0,0,0,.4);
@@ -198,7 +78,7 @@ form{
     background:blueviolet;
     color: #fff;
     border-radius: .3rem .3rem 0 0;
-    width: 450px;
+    /* width: 450px; */
 }
 
 body{
@@ -227,32 +107,3 @@ body{
     margin-bottom: 141px;
     
 }
-/* body{
-    color:black;
-/* } */
-/* .navbar{
-    display:flex;
-    align-items: center;
-    padding: 20px;
-
-}
-nav{
-    flex: 1;
-    text-align: right;
-}
-nav ul{
-    display: inline-block;
-    list-style: none;}
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-    color:white;
-}
-a{
-    text-decoration: none;
-    color:white;
-}
-.navtab{
-    display: flex;
-    flex-direction: column;
-}  */

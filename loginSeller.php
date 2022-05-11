@@ -31,7 +31,7 @@
 			   // break;
 		   }
 		   else{
-			   echo "Invalid login details";
+			echo "<script type='text/javascript'>alert('Invalid login details')</script>";
 			   
 			   // break;
 		   }
@@ -58,7 +58,7 @@
 			 <label >Email</label>
 	 		<input type="text" placeholder="Type your Email" name="Email"  required> 
 			 <label >Password</label>
-             <input type="text"  placeholder="Type your password" name="password"  required>
+             <input type="password"  placeholder="Type your password" name="password"  required>
 	 		
 	 		<button type="submit"  name="submit">Login</button>
 

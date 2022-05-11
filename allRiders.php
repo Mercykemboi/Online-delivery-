@@ -2,7 +2,7 @@
 session_start();
 include 'connect.php';
 
-$all="SELECT * FROM Customer ";
+$all="SELECT * FROM Rider ";
 
 // $set=$_GET["deliver_id"];
 
@@ -17,10 +17,10 @@ $query = mysqli_query($connection, $all);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Customers </title>
+	<title>Sellers</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main1.css">
 
 </head>
@@ -30,12 +30,12 @@ $query = mysqli_query($connection, $all);
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100">
-                   <!-- <h2 style="align-item:center;"> Customers in the System</h2> -->
 					<table>
 						<thead>
 							<tr class="table100-head">
-								<th class="column1">customer_id</th>
+								<th class="column1">Riders_id</th>
 								<th class="column2">Name</th>
+								
 								<th class="column4">Email</th>
 								<th class="column5">Phone No</th>
 								<th class="column6">Postal Address</th>
@@ -47,9 +47,8 @@ $query = mysqli_query($connection, $all);
 <?php while ($row=mysqli_fetch_array($query)) {?>
 <tr>
 
-<td class="column1"> <?php echo $row['customer_id']; ?></td>
+<td class="column1"> <?php echo $row['Riders_id']; ?></td>
 <td class="column2"> <?php echo $row['Name']; ?></td>
-
 <td class="column4"><?php echo $row['Email']; ?></td>
 <td class="column5"> <?php echo $row['phoneNo']; ?></td>
 <td class="column6"><?php echo $row['PostalA']; ?></td>
@@ -59,13 +58,14 @@ $query = mysqli_query($connection, $all);
 
 
 						</tbody>
-					
 					</table>
 				</div>
 			</div>
 		</div>
 	</div>
 
+
+	
 
 
 

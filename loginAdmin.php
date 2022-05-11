@@ -53,7 +53,7 @@ if($row>0){
             // break;
         }
         else{
-            echo "<script> alert (invalid login details) </script>";
+			echo "<script type='text/javascript'>alert('Invalid login details')</script>";
             
             // break;
         }

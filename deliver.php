@@ -73,7 +73,7 @@ $insertvalues="INSERT INTO Deliver(item, quantity,customer_id, Riders_id, seller
    echo" Insertion error".mysqli_error($connection);
   }
 }else{
-   echo "Phone number is not recorded";
+   echo "<script type='text/javascript'>alert('Phone nuumber is not recorded')</script>";
 }
 }else{
    echo "<script type='text/javascript'>alert('Rider is not available')</script>";

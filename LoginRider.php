@@ -53,7 +53,7 @@ if($row>0){
             // break;
         }
         else{
-            echo "Invalid login details";
+			echo "<script type='text/javascript'>alert('Rider is not available')</script>";
             
             // break;
         }

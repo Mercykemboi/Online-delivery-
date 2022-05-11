@@ -8,10 +8,19 @@ $set=$_GET['id'];
 
 include 'connect.php';
 
+$r = $connection->query("SELECT * FROM `deliver` WHERE `deliver_id` = $set");
+$delivery = $r->fetch_array();
+
 $all="SELECT * FROM updates WHERE deliver_id=$set ";
 
 
 $query = mysqli_query($connection, $all);
+
+$updates = [];
+
+while ($row=mysqli_fetch_array($query)){
+	array_push($updates, $row);
+}
 // echo $select;
 ?>
 <!DOCTYPE html>
@@ -20,19 +29,6 @@ $query = mysqli_query($connection, $all);
 	<title>Deliveries</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main1.css">
 <!--===============================================================================================-->
@@ -53,19 +49,36 @@ $query = mysqli_query($connection, $all);
 						</thead>
 						<tbody>
                             
-<?php while ($row=mysqli_fetch_array($query)) {?>
-<tr>
+						<?php foreach($updates as $row) {?>
+						<tr>
 
 
-<td class="column2"> <?php echo $row['InfoStatus']; ?></td> 
-<td class="column3"> <?php echo $row['additionalItem']; ?></td>
-<td class="column4"><?php echo $row['Time']; ?></td>
-</tr>
-<?php } ?>
+						<td class="column1"> <?php echo $row['InfoStatus']; ?></td> 
+						<td class="column2"> <?php echo $row['additionalItem']; ?></td>
+						<td class="column3"><?php echo $row['Time']; ?></td>
+						</tr>
+						<?php } ?>
 
+						
+						<?php if(count($updates) == 0){ ?>
+						<tr>
+						<td class="column1" colspan="3">
+							No update has been made
+						</td>
+						</tr>
+						<?php } ?>
 
 						</tbody>
 					</table>
+					<!-- <label >Delivery</label> -->
+          <!-- <input type="text"  placeholder="State if it has been delivered" name="state" class="delivery"  required> -->
+		  
+			<?php if(strtolower($delivery['status']) == 'delivered'){ ?>
+				<script type='text/javascript'>alert('Item has been delivered')  </script>;
+				<?php }else{ ?>
+				<a href="mark_as_delivered.php?id=<?= $set ?>" >Mark item as delivered</a>
+				<?php } ?>
+
 				</div>
 			</div>
 		</div>
@@ -74,15 +87,7 @@ $query = mysqli_query($connection, $all);
 
 	
 
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+
 
 </body>
 </html>

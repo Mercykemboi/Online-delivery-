@@ -33,33 +33,39 @@ $query = mysqli_query($connection, $all);
 <li>
     <a href="">
 
-      <span class="icons" ><img src="images/van.png" width="50px"></span>  
+      <span class="icons" ><img src="images/truck-solid.svg" width="45px" ></span>  
     <span class="title"><h2>Delivery</h2></span>
 </a>
 </li>
 <li>
     <a href="">
-   <span class="icons"><i class="fa fa-home" aria-hidden="true"></i></span> 
+   <span class="icons"><img src="images/home-solid.svg"  class="new-icon"></span> 
 
     <span class="title">Dashboard</span>
 </a>
 </li>
 <li>
     <a href="rider.html">
-     <img src="images/add.svg" alt="" class="new-icon">
+     <img src="images/user-plus-solid.svg" alt="" class="new-icon">
     <span class="title"> Add Rider</span>
 </a>
 </li>
 <li>
     <a href="allCustomers.php">
-    <span class="icons"><i class="fa fa-users" aria-hidden="true"></i></span>
+    <span class="icons"><img src="images/users-solid.svg" width="50px"   class="new-icon"></span>
     <span class="title">All Customers</span>
 </a>
 </li>
    <li>
        <a href="allSellers.php">
-    <span class="icons"><i class="fa fa-users" aria-hidden="true"></i></span>
+       <span class="icons"><img src="images/users-solid.svg" width="50px"  class="new-icon" ></span>
        <span class="title">All Sellers</span>
+    </a>
+   </li> 
+   <li>
+       <a href="allRiders.php">
+       <span class="icons"><img src="images/users-solid.svg" width="50px"  class="new-icon" ></span>
+       <span class="title">All Riders</span>
     </a>
    </li> 
    <!-- <li>
@@ -75,7 +81,7 @@ $query = mysqli_query($connection, $all);
     <span class="title">Help</span>
 </a>
 </li>  -->
- <li>
+ <!-- <li>
 
 
     <a href="settings.html">
@@ -83,12 +89,12 @@ $query = mysqli_query($connection, $all);
 
     <span class="title">Settings</span>
 </a>
-</li> 
+</li>  -->
 
 <li>
     
     <a href="logOut.php">
-        <span class="icons"><i class="fa fa-users" aria-hidden="true"></i></span>
+        <span class="icons"><img src="images/sign-out-alt-solid.svg" width="50px"  class="new-icon"></span>
 
     <span class="title">Log Out</span>
 </a>
@@ -101,12 +107,13 @@ $query = mysqli_query($connection, $all);
         <div class="toggle" onclick="toggleMenu();">
         <img src="images/iconmonstr-menu.svg" alt="menu" class="menu-icon">
         </div>
-        <div class="search">
-<label>
+        <div class="services">
+<!-- <label>
     <input type="text" placeholder="Search">
     <i class="fa fa-search" aria-hidden="true"></i>
 
-</label>
+</label> -->
+Online Delivery Services
 </div>
 <div class="user">
     <img src="images/bike1.jpg" width="100px">
@@ -116,35 +123,88 @@ $query = mysqli_query($connection, $all);
 <div class="cardBox">
     <div class="card">
         <div>
-            <div class="numbers">50</div>
+            <div class="numbers">
+                
+            <?php
+                $count = "SELECT COUNT(*) FROM customer";
+                $num = mysqli_query($connection,$count);
+                $row = mysqli_fetch_array($num);
+
+                if($num){
+                    echo $row[0];
+                }
+                else{
+                    echo "error".mysqli_error($connection);
+                }
+            ?>
+            </div>
             <div class="cardName">Customers</div>
         </div>
         <div class="icon-box">
-            <i class="fa fa-users" aria-hidden="true"></i>
+        <img src="images/users-solid.svg" width="50px">
         </div>
     </div>
     <div class="card">
         <div>
-            <div class="numbers">50</div>
+            <div class="numbers">
+            <?php
+                $count = "SELECT COUNT(*) FROM seller";
+                $num = mysqli_query($connection,$count);
+                $row = mysqli_fetch_array($num);
+
+                if($num){
+                    echo $row[0];
+                }
+                else{
+                    echo "error".mysqli_error($connection);
+                }
+            ?>
+            </div>
             <div class="cardName">Sellers</div>
         </div>
         <div class="icon-box">
-            <i class="fa fa-users" aria-hidden="true"></i>
+        <img src="images/users-solid.svg" width="50px">
         </div>
  
     </div>
     <div class="card">
         <div>
-            <div class="numbers">50</div>
+            <div class="numbers">
+            <?php
+                $count = "SELECT COUNT(*) FROM rider";
+                $num = mysqli_query($connection,$count);
+                $row = mysqli_fetch_array($num);
+
+                if($num){
+                    echo $row[0];
+                }
+                else{
+                    echo "error".mysqli_error($connection);
+                }
+            ?>
+            </div>
             <div class="cardName">Riders</div>
         </div>
         <div class="icon-box">
-            <i class="fa fa-users" aria-hidden="true"></i>
+        <img src="images/users-solid.svg" width="50px">
         </div>
     </div>
     <div class="card">
         <div>
-            <div class="numbers">50</div>
+            <div class="numbers">
+            <?php
+                $count = "SELECT COUNT(*) FROM deliver";
+                $num = mysqli_query($connection,$count);
+                $row = mysqli_fetch_array($num);
+
+                if($num){
+                    echo $row[0];
+                }
+                else{
+                    echo "error".mysqli_error($connection);
+                }
+            ?>
+            </div>
             <div class="cardName">Deliveries</div>
         </div>
     </div>
@@ -224,7 +284,6 @@ $query = mysqli_query($connection, $all);
 
 
    </div> 
-
 
 
 

@@ -17,18 +17,19 @@
       
     <div class="menu-bar">
         <!-- <a href="#" class="logo"><span>online</span>delivery</a> -->
+        <img src="images/iconmonstr-menu.svg" alt="" class="bar">
     <ul>
 
         <div class="links">
             <li><a href="#about">About</a></li>
         <li><a href="#Services">Services</a></li>
          <li> <a href="#Founders">Founders</a>
-            <li><a href="">Sign uP</a>
+            <li><a href="">Sign up</a>
         <div class="sub-menu">
             <ul>
             <li><a href="customer.html">Customer</a></li>
             <li><a href="seller.html">Seller</a></li>
-        </ul>
+            </ul>
         </div>
         
         </li>
@@ -36,7 +37,7 @@
         </div>
 
          <li><a href="loginAdmin.php" class="admin">Admin
-             <i class="fas fa-user-cog"></i></a></li>
+             <img src="images/user-cog-solid.svg" alt="user-cog-solid" width="20px"  ></a></li>
     </ul>
 
   
@@ -149,10 +150,12 @@
             </div>
             <div class="col-3" data-aos="fade-right"  data-aos-duration="1500">
                     <img src="images/bike.jpg">
+                    <b><p>Mercy</p></b>
                     <h3>Co-Founder</h3>
             </div>
             <div class="col-3"data-aos="fade-right"  data-aos-duration="1500">
                     <img src="images/bike.jpg">
+                    <b><p>Kemboi</p></b>
                     <h3>Manager</h3>
             </div>
     
@@ -161,12 +164,12 @@
 </div>
 <div id="contact" data-aos="fade-right"  data-aos-duration="1500">
 <div class="contact-section">
-    <div class="contact-info">
+    <div class="contact-info" >
         
-        <div><i class="fas fa-map-marker-alt"></i>2345 Moi Avenue Nairobi</div>
-        <div><i class="fas fa-envelope"></i>delivery@gmail.com</div>
-        <div><i class="fas fa-phone-alt"></i>+254 706 899 245</div>
-        <div><i class="fas fa-clock"></i>Mon-Fri 8.00am-5.00pm</div>
+        <div><img src="images/map-marker-alt-solid (1).svg" alt="map-marker" width="50px">2345 Moi Avenue Nairobi</div>
+        <div><img src="images/envelope-solid (1).svg" alt="envelope-solid" width="50px">delivery@gmail.com</div>
+        <div><img src="images/phone-square-alt-solid.svg" alt="phone" width="50px">+254 706 899 245</div>
+        <div><img src="images/clock-solid.svg" alt="clock" width="50px">Mon-Fri 8.00am-5.00pm</div>
         
     </div>
 
@@ -182,10 +185,10 @@
     </div>
 </div>
 </div>
-<footer class="footer" data-aos="fade-up >
+<footer class="footer" >
     <div class="container">
        <div class="row">
-<div class="footer-col" data-aos="fade-up">
+<div class="footer-col" >
 <h2><u>Company</u></h2>
 <ul>
     <li>About Us</li>
@@ -194,7 +197,7 @@
 </ul>
 </div>
 
-<div class="footer-col" data-aos="fade-up">
+<div class="footer-col" >
     <h2><u>Get help</u></h2>
     <ul>
         <li>FAQ</li>
@@ -203,14 +206,14 @@
         <li>Order Status</li>
     </ul>
     </div>
-<div class="footer-col" data-aos="fade-up">
+<div class="footer-col" >
     <h2><u>Follow us</u></h2>
     <div class="socials"> 
-    <ul>
-        <li><i class="fab fa-facebook"></i>    Facebook</li>
-        <li><i class="fab fa-instagram"></i>   Instagram</li>
-        <li><i class="fab fa-twitter"></i>     Twitter</li>
-        <li><i class="fab fa-linkedin-in"></i>   Linked in</li>
+    <ul >
+        <li ><img src="images/icons8-facebook.svg" alt="facebook" width="20px">  Facebook</li>
+        <li><img src="images/instagram-brands (1).svg" alt="instagram" width="15px">  Instagram</li>
+        <li><img src="images/twitter-brands.svg" alt="twitter" width="15px">     Twitter</li>
+        <li><img src="images/linkedin-in-brands.svg" alt="linkedin-in-brands" width="15px">   Linked in</li>
          
     </ul>
 </div>
@@ -220,6 +223,14 @@
 </footer>
 <script>
     AOS.init();
+
+    let menuBar = document.querySelector(".bar")
+    let menuItems = document.querySelector(".links")
+    let adminItem = document.querySelector(".admin")
+    menuBar.addEventListener("click",function(){
+        menuItems.classList.toggle("show-grid")
+        adminItem.classList.toggle("show-grid")
+    })
   </script>
 </body>
 </html>
